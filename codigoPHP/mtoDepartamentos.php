@@ -238,9 +238,9 @@
                                         echo '<td><a href="altaLogicaDepartamento.php?cod=' . $cod . '&pag=' . $pag . '"><img class="icon" src="../webroot/media/images/alta2.png"></a></td>';
                                     }*/
                                     echo "<td>" . $registro->VolumenNegocio . "</td>";
-                                    echo '<td><a href="consultarDepartamento.php?cod=' . $cod . '&pag=' . $pag . '"><img class="icon" style="width: 30px;" src="../webroot/media/images/ver2.png"></a></td>';
+                                    echo '<td><a href="mostrarDepartamento.php?cod=' . $cod . '&pag=' . $pag . '"><img class="icon" style="width: 30px;" src="../webroot/media/images/ver2.png"></a></td>';
                                     echo '<td><a href="editarDepartamento.php?cod=' . $cod . '&pag=' . $pag . '"><img class="icon" src="../webroot/media/images/editar2.png"></a></td>';
-                                    echo '<td><a href="borrarDepartamento.php?cod=' . $cod . '&pag=' . $pag . '"><img class="icon" src="../webroot/media/images/eliminar2.png"></a></td>';
+                                    echo '<td><a href="bajaDepartamento.php?cod=' . $cod . '&pag=' . $pag . '"><img class="icon" src="../webroot/media/images/eliminar2.png"></a></td>';
                                 echo '</tr>';
                             }
                         echo '</table>';
