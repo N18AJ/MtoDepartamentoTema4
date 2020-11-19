@@ -26,12 +26,9 @@
             }
             th{
                 font-size: 24px;
-                width: 40%;
+                width: 25%;
                 border-bottom: 2px solid white;
                 margin-bottom: 20px;
-            }
-            th:first-child{
-                width: 10%;
             }
             td{
                 margin-top: 10px;
@@ -103,11 +100,9 @@
                         $entradaOK = true;
 
                         //Declaración del array de errores
-
                         $aErrores['buscar'] = null;
 
                         //Declaración del array de datos del formulario
-
                         $aFormulario['buscar'] = null;
 
                         if (isset($_POST['enviar'])) {//Código que se ejecuta cuando se envia el formulario               
@@ -124,7 +119,7 @@
                         <!-- BOTONERA INICIAL -->
                         <div style="text-align: center;">
                             <div id="botonAceptar" style="display:inline-block;">
-                                <a href="insertarDepartamento.php"><h3>Añadir</h3></a>
+                                <a href="altaDepartamento.php"><h3>Añadir</h3></a>
                             </div>
                             <div id="botonAceptar" style="display:inline-block; ">
                                 <a href="importarDepartamentos.php"><h3>Importar</h3></a>
@@ -186,7 +181,7 @@
                                 $consulta->execute();
                                 $consulta = $mySQL->query($sqlDepartamento);
                                 echo 'Se han encontrado <strong style="color:red;">' . $consulta->rowCount() . "</strong> resultados<br><br>";
-                            } catch (Exception $exc) {
+                            } catch (PDOException $exc) {
                                 echo "Error: $exc->getMessage() <br>";
                                 echo "Codigo del error: $exc->getCode() <br>";
                             } finally {
@@ -203,7 +198,7 @@
                                 //Mostrar todos los registros en una tabla
                                 $sqlDepartamento = "SELECT * FROM Departamento LIMIT $pag," . 5; //Selección y mostrado de 5 por página
                                 $consulta = $mySQL->query($sqlDepartamento);
-                            } catch (Exception $exc) {
+                            } catch (PDOException $exc) {
                                 echo "Error: $exc->getMessage() <br>";
                                 echo "Codigo del error: $exc->getCode() <br>";
                             } finally {
@@ -216,7 +211,7 @@
                             echo '<tr>';
                                 echo '<th>Código</th>';
                                 echo '<th>Descripción</th>';
-                                /*echo '<th>Alta/Baja</th>';*/
+                                echo '<th>Alta/Baja</th>';
                                 echo '<th>Volumen</th>';
                                 echo '<th>Mostrar</th>';
                                 echo '<th>Editar</th>';
@@ -232,11 +227,11 @@
                                     echo '<tr>';
                                 }
                                     echo "<td>" . $cod . "</td><td>" . $registro->DescDepartamento . "</td>";
-                                   /* if ($fecha == NULL) {
+                                    if ($fecha == NULL) {
                                         echo '<td><a href="bajaLogicaDepartamento.php?cod=' . $cod . '&pag=' . $pag . '"><img class="icon" src="../webroot/media/images/baja2.png"></a></td>';
                                     } else {
                                         echo '<td><a href="altaLogicaDepartamento.php?cod=' . $cod . '&pag=' . $pag . '"><img class="icon" src="../webroot/media/images/alta2.png"></a></td>';
-                                    }*/
+                                    }
                                     echo "<td>" . $registro->VolumenNegocio . "</td>";
                                     echo '<td><a href="mostrarDepartamento.php?cod=' . $cod . '&pag=' . $pag . '"><img class="icon" style="width: 30px;" src="../webroot/media/images/ver2.png"></a></td>';
                                     echo '<td><a href="editarDepartamento.php?cod=' . $cod . '&pag=' . $pag . '"><img class="icon" src="../webroot/media/images/editar2.png"></a></td>';
@@ -266,10 +261,6 @@
                         }
                         ?>
                         </table>
-                        <div style="text-align: right;">
-                            <div id="botonAceptar" style="display:inline-block;">
-                                <a href="../../indexTema4.html"><h3>Volver</h3></a>
-                            </div>
                         </div>
                     </div> 
                 </article>

@@ -22,7 +22,7 @@ if (isset($_POST['enviar'])) {
     if (!isset($_POST['volumenNegocio']) || $_POST['volumenNegocio'] == null) {
                 $_POST['volumenNegocio'] = 1;
             }
-    $aErrores['volumenNegocio'] = validacionFormularios::comprobarEntero($_POST['volumenNegocio'], PHP_INT_MAX, 1, 1);
+    $aErrores['volumenNegocio'] = validacionFormularios::comprobarFloat($_POST['volumenNegocio'], PHP_FLOAT_MAX, 1, 1);
 
     foreach ($aErrores as $campo) { //recorre el array en busca de mensajes de error
         if ($campo != null) {
@@ -36,7 +36,7 @@ if (isset($_POST['enviar'])) {
 					// set the PDO error mode to exception
                                                     //PDO::ERRMODE_EXCEPTION - Además de establecer el código de error, PDO lanzará una excepción PDOException y establecerá sus propiedades para luego poder reflejar el error y su información.
             $mySQL->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (Exception $exc) {
+        } catch (PDOException $exc) {
             die("No se ha podido establecer la conexión:<br> " . $exc->getMessage());
         }
         try {
@@ -49,7 +49,7 @@ if (isset($_POST['enviar'])) {
             $consulta->execute();
             //Volver a la pagina de inicio
             header('Location: '.URL.'/proyectoDWES/proyectoTema4/MtoDepartamentosTema4/codigoPHP/mtoDepartamentos.php');
-        } catch (Exception $exc) {
+        } catch (PDOException $exc) {
             die("Error en la insercción de datos:<br> " . $exc->getMessage());
         }
     }
@@ -76,7 +76,7 @@ if (isset($_GET['cod'])) {
             $fechaBaja='EN SERVICIO';
         }
         $volumenNegocio = $result['VolumenNegocio'];
-    } catch (Exception $exc) {
+    } catch (PDOException $exc) {
         die("No se ha podido establecer la conexión:<br> " . $exc->getMessage());
     }
     ?>

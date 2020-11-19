@@ -5,10 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name="author" content="Nerea Álvarez Justel">
-        <!-- JS -->        
-        <script type="text/javascript" src="../webroot/javascript/tuCodigo.js"></script>
-        <!-- Recomendado 5 o 8 palabras clave, Cada palabra clave puede estar constituida por hasta 4 o 5 palabras. -->
-        <meta name="robots" content="index, follow" />
         <title>DAW. Nerea Álvarez Justel</title>
         <!-- CSS -->
         <link href="../webroot/css/estilos.css" rel="stylesheet" type="text/css">
@@ -26,6 +22,9 @@
                 margin-top: 15px;
                 font-size: 11pt;
                 margin-bottom: 15px;
+            }
+            h1{
+                font-size: 20pt;
             }
         </style>
     </head>
@@ -61,21 +60,33 @@
                     @since: 02/05/2020
                     Comentarios: Mostrar Aplicación.
                     */					
-                        echo"<h1>Mostrar Departamentos</h1>";
+                        echo"<h1>Mantenimiento Departamentos</h1>";
                             highlight_file("../codigoPHP/mtoDepartamentos.php"); //Mostrar código
-                        echo"<h1>Añadir Departamentos</h1>";
-                            highlight_file("../codigoPHP/altaLogicaDepartamento.php"); //Mostrar código
-                            echo"<h1>Añadir Departamentos</h1>";
-                            highlight_file("../codigoPHP/añadirDepartamento.php"); //Mostrar código
-                            echo"<h1>Añadir Departamentos</h1>";
-                            highlight_file("../codigoPHP/bajaLogicaDepartamento.php"); //Mostrar código
+                            
                         echo"<h1>Mostrar Departamento</h1>";
                             highlight_file("../codigoPHP/mostrarDepartamento.php"); //Mostrar código
-                        echo"<h1>Modificar Departamento</h1>";
-                            highlight_file("../codigoPHP/modificarDepartamento.php"); //Mostrar código
+                            
+                        echo"<h1>editar Departamento</h1>";
+                            highlight_file("../codigoPHP/editarDepartamento.php"); //Mostrar código
+                            
                         echo"<h1>Borrar Departamento</h1>";
-                            highlight_file("../codigoPHP/borrarDepartamento.php"); //Mostrar código
-					
+                            highlight_file("../codigoPHP/borrarDepartamento.php"); //Mostrar código    
+                        
+                        echo"<h1>Añadir Departamentos</h1>";
+                            highlight_file("../codigoPHP/altaDepartamento.php"); //Mostrar código
+                        
+                        echo"<h1>Exportar Departamento</h1>";
+                            highlight_file("../codigoPHP/exportarDepartamento.php"); //Mostrar código
+                            
+                        echo"<h1>Importar Departamento</h1>";
+                            highlight_file("../codigoPHP/importarDepartamento.php"); //Mostrar código    
+                            
+                        echo"<h1>Baja Logica Departamentos</h1>";
+                            highlight_file("../codigoPHP/bajaLogicaDepartamento.php"); //Mostrar código
+                            
+                        echo"<h1>Alta Logica Departamentos</h1>";
+                            highlight_file("../codigoPHP/altaLogicaDepartamento.php"); //Mostrar código
+                            	
                     ?>
                     </div> 
                 </article>

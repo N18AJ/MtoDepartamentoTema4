@@ -10,7 +10,7 @@ if (isset($_POST['enviar'])) {
                             // set the PDO error mode to exception
 						//PDO::ERRMODE_EXCEPTION - Además de establecer el código de error, PDO lanzará una excepción PDOException y establecerá sus propiedades para luego poder reflejar el error y su información.
         $mySQL->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (Exception $exc) {
+    } catch (PDOException $exc) {
         die("No se ha podido establecer la conexión:<br> " . $exc->getMessage());
     }
     try {
@@ -21,7 +21,7 @@ if (isset($_POST['enviar'])) {
         //Volver a la pagina de inicio
         //Sheader('Location: '.URL.'/proyectoDWES/proyectoTema4/MtoDepartamentosTema4/codigoPHP/mtoDepartamentos.php');
         header("Location: mtoDepartamentos.php?pag=".$_GET['pag']);
-    } catch (Exception $exc) {
+    } catch (PDOException $exc) {
         die("Error en la insercción de datos:<br> " . $exc->getMessage());
     }
 }
@@ -46,7 +46,7 @@ if (isset($_GET['cod'])) {
         $fechaBaja = $result['FechaBaja'];
         $volumenNegocio = $result['VolumenNegocio'];
         
-    } catch (Exception $exc) {
+    } catch (PDOException $exc) {
         die("No se ha podido establecer la conexión:<br> " . $exc->getMessage());
     }
     ?>
