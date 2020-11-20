@@ -89,7 +89,7 @@ if ($codigo != null) {
                             <input type="text" value="<?php echo $volumenNegocio ?>" name="volumenNegocio" disabled><br>
                         </form>
                         <!-- Boton VOLVER -->
-                        <input id="boton" style="text-align: center;" type="button" name="Volver" value="Volveer" onclick="location='mtoDepartamentos.php'">
+                        <input id="boton" style="text-align: center;" type="button" name="Volver" value="Volver" onclick="location='mtoDepartamentos.php'">
 <?php 
     } 
 ?>

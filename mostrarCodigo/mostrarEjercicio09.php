@@ -70,16 +70,16 @@
                             highlight_file("../codigoPHP/editarDepartamento.php"); //Mostrar código
                             
                         echo"<h1>Borrar Departamento</h1>";
-                            highlight_file("../codigoPHP/borrarDepartamento.php"); //Mostrar código    
+                            highlight_file("../codigoPHP/bajaDepartamento.php"); //Mostrar código    
                         
                         echo"<h1>Añadir Departamentos</h1>";
                             highlight_file("../codigoPHP/altaDepartamento.php"); //Mostrar código
                         
                         echo"<h1>Exportar Departamento</h1>";
-                            highlight_file("../codigoPHP/exportarDepartamento.php"); //Mostrar código
+                            highlight_file("../codigoPHP/exportarDepartamentos.php"); //Mostrar código
                             
                         echo"<h1>Importar Departamento</h1>";
-                            highlight_file("../codigoPHP/importarDepartamento.php"); //Mostrar código    
+                            highlight_file("../codigoPHP/importarDepartamentos.php"); //Mostrar código    
                             
                         echo"<h1>Baja Logica Departamentos</h1>";
                             highlight_file("../codigoPHP/bajaLogicaDepartamento.php"); //Mostrar código

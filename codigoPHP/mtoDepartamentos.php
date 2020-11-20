@@ -180,7 +180,7 @@
                                 $consulta = $mySQL->prepare($sqlDepartamento);
                                 $consulta->execute();
                                 $consulta = $mySQL->query($sqlDepartamento);
-                                echo 'Se han encontrado <strong style="color:red;">' . $consulta->rowCount() . "</strong> resultados<br><br>";
+                                echo '<h1>Se han encontrado <strong style="color:red;">' . $consulta->rowCount() . "</strong> resultados</h1><br><br>";
                             } catch (PDOException $exc) {
                                 echo "Error: $exc->getMessage() <br>";
                                 echo "Codigo del error: $exc->getCode() <br>";
@@ -211,6 +211,7 @@
                             echo '<tr>';
                                 echo '<th>Código</th>';
                                 echo '<th>Descripción</th>';
+                                echo '<th>Fecha</th>';
                                 echo '<th>Alta/Baja</th>';
                                 echo '<th>Volumen</th>';
                                 echo '<th>Mostrar</th>';
@@ -226,7 +227,9 @@
                                 } else {
                                     echo '<tr>';
                                 }
-                                    echo "<td>" . $cod . "</td><td>" . $registro->DescDepartamento . "</td>";
+                                    echo "<td>" . $cod . "</td>
+                                    <td>" . $registro->DescDepartamento . "</td>";
+                                    echo"<td>" . $registro->FechaBaja . "</td>";
                                     if ($fecha == NULL) {
                                         echo '<td><a href="bajaLogicaDepartamento.php?cod=' . $cod . '&pag=' . $pag . '"><img class="icon" src="../webroot/media/images/baja2.png"></a></td>';
                                     } else {
