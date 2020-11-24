@@ -26,3 +26,6 @@ A partir de una base de datos buscaresmos, mostraremos editaremos, borarremos a√
 
 **BACK END**
 - PHP.
+
+## Licencia
+[MIT](https://choosealicense.com/licenses/mit/)
