@@ -28,10 +28,10 @@ A partir de una base de datos buscaresmos, mostraremos editaremos, borarremos a√
 - PHP 7.4.
 
 **Desarrollo**
-- http://daw212.sauces.local/proyectoDWES/proyectoTema4/indexTema4.html.
+- http://daw212.sauces.local/proyectoDWES/proyectoTema4/MtoDepartamentosTema4/codigoPHP/mtoDepartamentos.php.
 
 **1&1**
-- http://daw212.ieslossauces.es/proyectoDWES/proyectoTema4/indexTema4.html.
+- http://daw212.ieslossauces.es/proyectoDWES/proyectoTema4/MtoDepartamentosTema4/codigoPHP/mtoDepartamentos.php.
 
 ## Licencia
 [MIT](https://choosealicense.com/licenses/mit/)
